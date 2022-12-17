@@ -11,7 +11,7 @@ const Photos = () => {
     const [error, setError] = useState(null);
 
     const deletePhoto = (id) => {
-        fetch(`https://gallery-app-server.vercel.app/photos${id}`, {
+        fetch(`https://gallery-app-server.vercel.app/photos/${id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -33,6 +33,9 @@ const Photos = () => {
             .then((res) => {
                 setPhotos(res);
                 setLoading(false);
+            }).catch((err) => {
+                setLoading(false);
+                setError(err);
             });
     }, [sort, submited]);
 

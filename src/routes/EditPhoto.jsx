@@ -12,7 +12,7 @@ const EditPhoto = () => {
 
     const editPhoto = (e) => {
         e.preventDefault();
-        let url = `https://gallery-app-server.vercel.app/photos${id}`;
+        let url = `https://gallery-app-server.vercel.app/photos/${id}`;
         fetch(url, {
             method: "PATCH",
             headers: {
@@ -35,7 +35,7 @@ const EditPhoto = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://gallery-app-server.vercel.app/photos${id}`)
+        fetch(`https://gallery-app-server.vercel.app/photos/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setImageUrl(data.imageUrl);

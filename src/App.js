@@ -11,14 +11,14 @@ const App = () => {
     <>
       <div className='navbar'>
         <div className='studentInfo'>
-          <h2 className='studentName'>Arif Setiawan</h2>
-          <p className='studentID'>FE2897318</p>
+          <h2 className="studentName">Arif Setiawan</h2>
+          <p className="studentId">FE2897318</p>
         </div>
         <Link to='/'>Home</Link>
         <Link to='/photos'>My Photos</Link>
         <Link to='/add'>Add Photo</Link>
       </div>
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/photos">
